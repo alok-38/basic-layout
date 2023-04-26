@@ -1,21 +1,32 @@
-body {
-    background-color: #27272c;
-    color: floralwhite;
+:root {
+    --color-primary: #ab79d6;
+    --color-on-primary: #351d4a;
+    --color-secondary: #d367c1;
+    --color-background: #27272c;
+    --color-on-background: #c5c5ce;
+    --color-background-alt: #1e1c22;
+    --color-background-alt-alpha: rgba(30, 28, 34, .75);
+    --color-inverse: #fff;
+    --color-gray: #8e8e8e;
+    --color-yellow: #dedf40;
+    --color-green: #62cb5c;
+    --color-blue: #00bbcb;
+    --color-on-blue: #004a09;
+    --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%, var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
 }
 
-h1,
-h2,
-h3 {
-    color: floralwhite;
+body {
+    background-color: var(--color-background);
+    color: var(--color-inverse);
 }
 
 h1::before {
-    background-color: yellow;
+    background-color: var(--color-primary);
     content: "";
-    left: 0;
-    padding: 1em;
+    left: 1;
+    padding: 2em;
     position: absolute;
-    top: 0;
+    top: 1;
     /* Rotate the yello stuff by 45deg clockwise
     around its center and move the element 
     horizontally to the left by 22% of its
@@ -23,4 +34,22 @@ h1::before {
     transform: rotate(45deg) translateX(-22%);
     /* position the yellow stuff behind the h1 element */
     z-index: -1;
+    margin-top: 1em;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+p {
+    width: 75%;
+    margin: auto;
 }
