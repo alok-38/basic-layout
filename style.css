@@ -15,6 +15,12 @@
     --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%, var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
 }
 
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
 body {
     background-color: var(--color-background);
     color: var(--color-inverse);
@@ -46,10 +52,19 @@ h3 {
 
 img {
     display: block;
+}
+
+p,
+figcaption,
+img {
+    width: 75%;
     margin: auto;
 }
 
 p {
-    width: 75%;
-    margin: auto;
+    line-height: 1.6;
+}
+
+cite {
+    padding-left: 145px;
 }
