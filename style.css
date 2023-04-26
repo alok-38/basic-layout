@@ -1,0 +1,26 @@
+body {
+    background-color: #27272c;
+    color: floralwhite;
+}
+
+h1,
+h2,
+h3 {
+    color: floralwhite;
+}
+
+h1::before {
+    background-color: yellow;
+    content: "";
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    /* Rotate the yello stuff by 45deg clockwise
+    around its center and move the element 
+    horizontally to the left by 22% of its
+    own width while retainng its verticle position */
+    transform: rotate(45deg) translateX(-22%);
+    /* position the yellow stuff behind the h1 element */
+    z-index: -1;
+}
